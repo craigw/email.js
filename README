@@ -24,6 +24,16 @@ Also exposed are the email to and subject headers.
 It's all rather simplistic at the moment, but I'd like it to be able to
 handle most if not all emails - including attachments.
 
+Contributing
+------------
+
+  * Fork the project.
+  * Make your feature addition or bug fix.
+  * Add tests for it. This is important so I don't break it in a
+    future version unintentionally.
+  * Commit and push your changes.
+  * Send me a pull request. Bonus points for topic branches.
+
 Authors
 -------
 
