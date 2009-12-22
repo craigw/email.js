@@ -11,8 +11,7 @@ browser-based client-side-only language. I've been playing with node.js
 for the past few weeks and it's rather nice. I'd quite like to send
 and receive email in my node.js[1] application.
 
-email.js is implemented as a CommonJS[2] module and tested using
-spectacular[3]. Use it like this:
+email.js is implemented as a CommonJS[2] module. Use it like this:
 
   var email = require("/path/to/email.js"),
       sys   = require("sys");
@@ -31,8 +30,23 @@ Contributing
   * Make your feature addition or bug fix.
   * Add tests for it. This is important so I don't break it in a
     future version unintentionally.
+  * Make sure all the tests pass.
   * Commit and push your changes.
   * Send me a pull request. Bonus points for topic branches.
+
+Testing
+-------
+
+We use my fork of spectacular[3] for testing. It's setup as a submodule
+so you'll get it by running `git submodule init && git submodule update`
+in the project directory.
+
+Run the tests like this:
+
+  cd /path/to/email.js
+  node vendor/spectacular/tacular.js
+
+All tests must pass for a change to be committed to the master branch.
 
 Authors
 -------
@@ -44,4 +58,4 @@ Links
 
 [1] http://nodejs.org/
 [2] http://commonjs.org/
-[3] http://github.com/jcrosby/spectacular.git
+[3] http://github.com/craigw/spectacular.git
