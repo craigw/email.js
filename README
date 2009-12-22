@@ -1,0 +1,30 @@
+email.js
+========
+
+Email generation and parsing in Javascript.
+
+Why?
+----
+
+Javascript is starting to break out of it's perceived roll as a
+browser-based client-side-only language. I've been playing with node.js
+for the past few weeks and it's rather nice. I'd quite like to send
+and receive email in my node.js[1] application.
+
+email.js is implemented as a CommonJS[2] module and tested using
+spectacular[3]. Use it like this:
+
+  var email = require("/path/to/email.js"),
+      sys   = require("sys");
+  var message = email.message(message_source);
+  sys.puts("Got an email from " + message.from + ":\n" + message.body);
+
+Also exposed are the email to and subject headers.
+
+It's all rather simplistic at the moment, but I'd like it to be able to
+handle most if not all emails - including attachments.
+
+Authors
+-------
+
+Craig R Webster <http://barkingiguana.com/#me>
