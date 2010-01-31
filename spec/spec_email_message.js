@@ -61,3 +61,9 @@ describe("An email message addressed to several people", function() {
     assertEqual("Lunch?", message.body());
   });
 });
+
+describe("Creating a new email message from scratch", function() {
+  it("should not set the to field", function() {
+    assertEqual([], email.message().to())
+  });
+})
