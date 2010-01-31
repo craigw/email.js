@@ -1,4 +1,4 @@
-var email = require(path.join(process.cwd(), 'lib', 'email'));
+var Email = require(path.join(process.cwd(), 'lib', 'email'));
 
 describe("An email message", function() {
   beforeEach(function() {
