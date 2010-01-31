@@ -2,7 +2,7 @@ var email = require(path.join(process.cwd(), 'lib', 'email'));
 
 describe("An email message", function() {
   beforeEach(function() {
-    email_source = "To: alice\r\nFrom: bob\r\nSubject: Yo!\r\n\r\nLunch?\r\n";
+    email_source = "To: alice\nFrom: bob\nSubject: Yo!\n\nLunch?\n";
   });
 
   it("should not change the raw source of a message", function() {
@@ -33,7 +33,7 @@ describe("An email message", function() {
 
 describe("An email message addressed to several people", function() {
   beforeEach(function() {
-    email_source = "To: alice,emily\r\nFrom: bob\r\nSubject: Yo!\r\n\r\nLunch?\r\n";
+    email_source = "To: alice,emily\nFrom: bob\nSubject: Yo!\n\nLunch?\n";
   });
 
   it("should not change the raw source of a message", function() {
