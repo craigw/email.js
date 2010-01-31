@@ -7,27 +7,27 @@ describe("An email message", function() {
 
   it("should not change the raw source of a message", function() {
     var message = email.message(basic_email);
-    assertEqual(basic_email, message.raw_source);
+    assertEqual(basic_email, message.raw_source());
   });
 
   it("should be able to parse the 'To:' header", function() {
     var message = email.message(basic_email);
-    assertEqual("alice", message.to);
+    assertEqual("alice", message.to());
   });
 
   it("should be able to parse the 'From:' header", function() {
     var message = email.message(basic_email);
-    assertEqual("bob", message.from);
+    assertEqual("bob", message.from());
   });
 
   it("should be able to parse the 'Subject:' header", function() {
     var message = email.message(basic_email);
-    assertEqual("Yo!", message.subject);
+    assertEqual("Yo!", message.subject());
   });
 
   it("should be able to parse the body", function() {
     var message = email.message(basic_email);
-    assertEqual("Lunch?", message.body);
+    assertEqual("Lunch?", message.body());
   });
 
 });
