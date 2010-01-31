@@ -16,7 +16,8 @@ email.js is implemented as a CommonJS[2] module. Use it like this:
   var email = require("/path/to/email.js"),
       sys   = require("sys");
   var message = email.message(message_source);
-  sys.puts("Got an email from " + message.from + ":\n" + message.body);
+  sys.puts("Got an email from " + message.from() + \
+           ":\n" + message.body());
 
 Also exposed are the email to and subject headers.
 
